@@ -1,3 +1,7 @@
+# This file defines a FakeDevice class that simulates the behavior of a real device for testing purposes.
+class WiFiAlreadyConnectedError(Exception):
+    pass
+
 class FakeDevice:
     def __init__(self):
         self.firmware_version = "1.0.0"
@@ -9,6 +13,8 @@ class FakeDevice:
             return self.firmware_version
                
         elif command == "CONNECT_WIFI":
+            if self.wifi_connected:
+                raise WiFiAlreadyConnectedError("WiFi is already connected.")
             self.wifi_connected = True
             return "WIFI_CONNECTED"
         

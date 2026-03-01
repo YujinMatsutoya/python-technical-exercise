@@ -1,4 +1,5 @@
 class DeviceClient:
+    # This class serves as a client interface to interact with the FakeDevice
     def __init__(self, device):
         self.device = device
 
