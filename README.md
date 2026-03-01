@@ -4,11 +4,12 @@ Small Python project that simulates a hardware device (`FakeDevice`) and a clien
 
 ## Setup (uv)
 
-Install uv (pick one):
+Install uv:
 - `brew install uv`
 
-Install dependencies:
+Clone and install dependencies:
 ```bash
 git clone git@github.com:YujinMatsutoya/python-technical-exercise.git
 cd python-technical-exercise
 uv sync
+
